@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(0, 0%, 81%);
+    height: 100vh;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    border-radius: 0.6rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    margin: 0.8rem;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.details{
+    display: block;
+    margin-left: 1em;
+}
+.author{
+    margin-bottom: 0;
+}
+.status{
+    margin-top: 0;
+    color: hsla(0, 0%, 81%,50%);
+}
+.profile-pic{
+    border-radius: 50%;
+    max-height: 3.2rem;
+    margin-bottom: .8rem;
+}
+article{
+    color: hsla(0, 0%, 81%,70%);
+}
+h1{
+    font-size: 1.5rem;
+}
+.c-1 .info .profile-pic{
+    border: 3px solid hsla(263, 55%, 52%, 1);
+}
+.c-5 .info .profile-pic{
+    border: 3px solid hsl(263, 55%, 52%);
+}
+.c-1{ grid-area: c-1;background-color: rgb(117, 65, 200);}
+.c-2{ grid-area: c-2;background-color: hsl(217, 19%, 35%);}
+.c-3{ grid-area: c-3;background-color: white;color: hsl(217, 19%, 35%)}
+.c-4{ grid-area: c-4;background-color: white;color: hsl(217, 19%, 35%)}
+.c-5{ grid-area: c-5;background-color: hsl(219, 29%, 14%);}
+
+.grid{
+    display: grid;
+    grid-template-areas: 
+    'c-1 c-1 c-2 c-3'
+    'c-4 c-5 c-5 c-3';
+    grid-template-columns: repeat(auto-fit, 25%);
+    grid-template-rows: 1fr;
+}
+@media(max-width:800px){
+    .grid{
+        grid-template-areas: 
+        'c-1'
+        'c-2'
+        'c-4'
+        'c-5'
+        'c-3';
+        grid-template-columns: 1fr;
+    }
+}
